@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>Member and Event Management Systems - Installation</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+		<h1>MEMS - Installation</h1>
+		<form method="POST" action="Install.php">
+		<p>MEMS requires a MySQL database to function.  
+			Enter the details of your database below.
+			This user will need the ability to create/edit/delete databases, tables, and tuples.</p>
+		<table>
+			<tr>
+				<td><label for="dbHostName">Host Name: </label></td>
+				<td><input type="text" name="dbHostName" value="localhost"/></td>
+			</tr>
+			<tr>
+				<td><label for="dbName">Database Name: </label></td>
+				<td><input type="text" name="dbName" value="MEMS"/></td>
+			</tr>
+			<tr>
+				<td><label for="dbUserName">Username: </label></td>
+				<td><input type="text" name="dbUserName" value="root"/></td>
+			</tr>
+			<tr>
+				<td><label for="dbPassword">Password </label></td>
+				<td><input type="text" name="dbPassword" value=""/></td>
+			</tr>
+		</table>
+		<br/>
+		<p>If you wish to encrypt the data in the database, enter a pass-code below.  This code will be required if you ever wish to
+		restore your data from a back-up copy.</p>
+		<table>
+			<tr>
+				<td><label for="passCode">Database Pass Code: </label></td>
+				<td><input type="text" name="passCode" value=""/></td>
+			</tr>
+		</table>
+		<br/>
+		<p>Now enter some details of your organization</p>
+		<table>
+			<tr>
+				<td><label for="orgName">Organization Name: </label></td>
+				<td><input type="text" name="orgName" value="University EMS"/></td>
+			</tr>
+			<tr>
+				<td><label for="demoCUEMS">Install CUEMS Demo: </label></td>
+				<td><input type="checkbox" name="demoCUEMS" checked="checked" /></td>
+			</tr>
+			<tr>
+				<td><label for="demoStEMS">Install StEMS Demo: </label></td>
+				<td><input type="checkbox" name="demoStEMS" /></td>
+			</tr>
+		</table>
+		<br/>
+		<p>We will create an initial user for your system.
+			This user will be able to logon, and approve additional members.  
+			After your system is set-up, we recommend decentralizing the power, and transfer some of these privileges to others.
+		</p>
+		<table>
+			<tr>
+				<td><label for="newUserName">User Name: </label></td>
+				<td><input type="text" name="newUserName" value="admin"/></td>
+			</tr>
+			<tr>
+				<td><label for="newPassword">Password: </label></td>
+				<td><input type="password" name="newPassword" value=""/></td>
+			</tr>
+		</table>
+		<br/>
+		<input type="submit" value="Begin Installation"/>
+		</form>
+	</body>
+</html>
